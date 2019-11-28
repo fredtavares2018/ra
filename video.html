@@ -18,6 +18,26 @@
 <!-- include aframe-ar.js -->
 <script src="js/aframe-ar.js"></script>
 
+<script>
+AFRAME.registerComponent('vidhandler', {
+  init: function () {
+    this.toggle = false;
+    document.querySelector("#vid").pause(); //reference to the video
+  },
+  tick:function(){  
+   if(document.querySelector("a-marker").object3D.visible == true){
+     if(!this.toggle){
+       this.toggle = true;
+       document.querySelector("#vid").play();
+     }
+   }else{
+     this.toggle = false;
+     document.querySelector("#vid").pause();
+   }
+  }
+});
+</script>
+
 
 <body style='margin : 0px; overflow: hidden;'>
 
@@ -29,7 +49,7 @@
 	 src="sintel.mp4" 
 	 type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' 
 	 rotation="90 180 0" 
-	 autoplay="true"
+	 
 	 loop="false" 
 	 crossOrigin="anonymous" 
 	 webkit-playsinline 
