@@ -1,89 +1,75 @@
-
-<!DOCTYPE html>
+<!doctype HTML>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title></title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="googlebot" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <script
-    type="text/javascript"
-    src="/js/lib/dummy.js"
-    
-  ></script>
-
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-  <style id="compiled-css" type="text/css">
-      
-  </style>
-
-
-  <!-- TODO: Missing CoffeeScript 2 -->
-
-  <script type="text/javascript">//<![CDATA[
-
-    window.onload=function(){
-      
-$(document).on('click', 'a[data-toggle]', function (e) {
-    e.preventDefault();
-
-    //carrega URL do link no IFRAME
-    $("#iframeModal").attr("src", this.href);
-});
-
-    }
-
-  //]]></script>
-
-</head>
-<body>
+<style type="text/css">
   
-    <!-- Button trigger modal -->
-<a href="https://fredtavares2018.github.io/ra/fulereno.html" data-toggle="modal" data-target="#exampleModal">
-  FULERENO
-</a> |
-<a href="https://fredtavares2018.github.io/ra/grafeno.html" data-toggle="modal" data-target="#exampleModal">
-  GRAFENO
-</a> | 
-<a href="https://fredtavares2018.github.io/ra/nano.html" data-toggle="modal" data-target="#exampleModal">
-  NANOTUBO DE CARBONO 01
-</a> | 
-<a href="https://fredtavares2018.github.io/ra/nano1.html" data-toggle="modal" data-target="#exampleModal">
-  NANOTUBO DE CARBONO 02
-</a>
+#arjsDebugUIContainer 
+{
+   display: none; !important;
+}
+  
+.a-enter-vr-button
+{
+   display: none; !important;   
+}
+</style>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">REALIDADE AUMENTADA</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe id="iframeModal" class="embed-responsive-item" src=""></iframe>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">FECHAR</button>
-      </div>
-    </div>
-  </div>
-</div>
+<script src="https://threejs.org/build/three.js"></script>
 
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <body style='margin : 0px; overflow: hidden;'>
+
+    <a-scene embedded arjs='sourceType: webcam;'>
+  
+    <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/pattern-nano1.patt'>
+<a-video 
+   src="nano2.mp4" 
+   type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' 
+   rotation="-90 0 0" 
+   
+   loop="true" 
+   crossOrigin="anonymous" 
+   webkit-playsinline 
+   style="display:none" vidhandler>
+  </a-video>
+
+</a-marker>
+
+<a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/pattern-nano.patt'>
+<a-video 
+   src="grafeno.mp4" 
+   type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' 
+   rotation="-90 0 0" 
+   
+   loop="true" 
+   crossOrigin="anonymous" 
+   webkit-playsinline 
+   style="display:none" vidhandler>
+  </a-video>
+
+</a-marker>
+
+<a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/pattern-fulereno.patt'>
+<a-video 
+   src="fulereno.mp4" 
+   type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' 
+   rotation="-90 0 0" 
+   
+   loop="true" 
+   crossOrigin="anonymous" 
+   webkit-playsinline 
+   style="display:none" vidhandler>
+  </a-video>
+
+</a-marker>
+
+      <a-entity camera></a-entity>
+
+    </a-scene>
 
 </body>
 </html>

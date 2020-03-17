@@ -1,3 +1,8 @@
+ <?php
+ header("Access-Control-Allow-Origin: https://quimicaaumentada.com.br", false);
+
+ ?>
+
 <!doctype HTML>
 <html>
 
@@ -26,9 +31,10 @@
      
 <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/pattern-nano.patt'>
 <a-video 
-	 src="nano.mp4" 
+	 src="https://youtu.be/1iDTYnxCNXM" 
 	 type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' 
 	 rotation="-90 0 0" 
+	 controls="true"
 	 
 	 loop="true" 
 	 crossOrigin="anonymous" 
