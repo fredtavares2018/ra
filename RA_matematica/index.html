@@ -50,9 +50,9 @@ a {
 
         <!-- Basic triangle. -->
         <a-triangle 
-        color="#CCC" 
+        color="#00ff00" 
         vertex-c="1 -1 0"
-        href= "https://aframe-aincraft.glitch.me"
+        rotation="-90 0 0"
         >
         </a-triangle>
 
@@ -96,7 +96,9 @@ a {
           <a-sphere position="0.5 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
           <a-sphere position="0 0.5 -1.1" radius="0.1" color="#ff00ff"></a-sphere>
 
-              <a-cylinder position="-0.65 0.5 0" rotation="-90 15 0" radius="0.04" height="1" color="#FFC65D"> <a-animation 
+              <a-cylinder position="-0.65 0.5 0"  radius="0.04" height="1" color="#FFC65D"> 
+
+                <a-animation 
                 attribute="rotation"
                  dur="10000"
                  fill="forwards"
@@ -222,16 +224,34 @@ a {
 
       </a-marker>
 
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-circulo1.patt'>
+
+          <!-- circulo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+
+         <a-ring radius-inner="0.01" radius-outer="0.7" rotation="-90 0 0" color="#ff0000"></a-ring>
+
+          <a-text 
+          value="Circulo" 
+          color="#fff"
+          rotation="-90 0 0" 
+          position="-0.3 0.5 -0.1"
+          >
+          </a-text>
+
+          <!-- circulo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+
+      </a-marker>
+
       <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-circunferencia1.patt'>
 
         <!-- CIRCUNFERÊNCIA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
 
-        <a-torus position="0 0.5 0" rotation="-90 0 0" arc="360" radius="0.5" radius-tubular="0.02"  color="#FFC65D">
+        <a-torus position="0 0.5 0"  arc="360" radius="0.5" radius-tubular="0.02"  color="#FFC65D">
           <a-animation 
             attribute="rotation"
-             dur="10000"
+             dur="5000"
              fill="forwards"
-             to="360 360 360"
+             to="360 0 0"
              easing="linear"
              repeat="indefinite">                          
           </a-animation>
@@ -252,7 +272,7 @@ a {
       <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-texto1.patt'>
 
         <a-text 
-        value="Circunferencia" 
+        value="Realidade" 
         rotation="-90 0 0" 
         geometry="primitive:plane">
         </a-text>
@@ -277,7 +297,7 @@ a {
 
       <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-box.patt'>
 
-          <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+          <a-box position="0 0.5 0"  color="#4CC3D9"></a-box>
 
       </a-marker>
 
@@ -324,7 +344,7 @@ a {
       <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-anel1.patt'>
 
         <!-- Basic anel = ring. -->
-        <a-ring color="teal" radius-inner="1" radius-outer="2"></a-ring>
+        <a-ring color="#0000ff" radius-inner="0.6" radius-outer="0.7" rotation="-90 0 0 "></a-ring>
 
       </a-marker>
 
