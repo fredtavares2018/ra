@@ -45,44 +45,58 @@ a {
   <body style='margin : 0px; overflow: hidden;'>
 
     <a-scene embedded arjs='sourceType: webcam;'>
-    <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-quadrado.patt'>
 
-      <!-- Basic anel = ring. -->
-      <!-- <a-ring color="teal" radius-inner="1" radius-outer="2"></a-ring> -->
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-tri1.patt'>
 
+        <!-- Basic triangle. -->
+        <a-triangle 
+        color="#CCC" 
+        vertex-c="1 -1 0"
+        href= "https://aframe-aincraft.glitch.me"
+        >
+        </a-triangle>
 
-      <!-- octaedro regular -->
+      </a-marker>
 
-      <!-- <a-octahedron color="#FF0000" radius="1" wireframe="true"></a-octahedron> -->
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-tri2.patt'>
 
-      <!-- octaedro regular -->
+        <!-- TRIÂNGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
 
+        <!-- superior esquerdo, inferior esquerdo, inferior direito-->
 
-      <!-- tetraedro regular -->
+        <a-sphere position="-0.5 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere>
+        <a-sphere position="-0.5 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
+        <a-sphere position="0.5 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
 
-      <!-- <a-tetrahedron color="#FF926B" radius="1" wireframe="true"></a-tetrahedron> -->
+        <a-cylinder position="-0.5 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FFC65D"></a-cylinder>
+        <a-cylinder position="0 0.5 0" rotation="-90 45 0" radius="0.04" height="1.5" color="#FF0000"></a-cylinder>
+        <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#0000FF"></a-cylinder> 
 
-      <!-- tetraedro regular -->
+         <a-text 
+        value="Triangulo" 
+        color="#ff0000"
+        rotation="-90 0 0" 
+        position="0.2 0 0"
+        >
+        </a-text>
 
-      <!-- Basic triangle. -->
-      <a-triangle 
-      color="#CCC" 
-      vertex-c="1 -1 0"
-      href= "https://aframe-aincraft.glitch.me"
-      >
-      </a-triangle>
+        <!-- TRIÂNGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
 
-      <!-- Pentagono,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+      </a-marker>
 
-      <!-- superior esquerdo,inferior esquerdo,superior direito,inferior direito -->
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-pent1.patt'>
 
-   <!--    <a-sphere position="-0.80 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere> 
-      <a-sphere position="-0.5 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
-      <a-sphere position="0.80 0.5 -0.5" radius="0.1" color="#00ffdf"></a-sphere>
-      <a-sphere position="0.5 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
-      <a-sphere position="0 0.5 -1.1" radius="0.1" color="#ff00ff"></a-sphere>
+          <!-- Pentagono,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
 
-      <a-cylinder position="-0.65 0.5 0" rotation="-90 15 0" radius="0.04" height="1" color="#FFC65D"> <a-animation 
+          <!-- superior esquerdo,inferior esquerdo,superior direito,inferior direito -->
+
+          <a-sphere position="-0.80 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere> 
+          <a-sphere position="-0.5 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
+          <a-sphere position="0.80 0.5 -0.5" radius="0.1" color="#00ffdf"></a-sphere>
+          <a-sphere position="0.5 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
+          <a-sphere position="0 0.5 -1.1" radius="0.1" color="#ff00ff"></a-sphere>
+
+              <a-cylinder position="-0.65 0.5 0" rotation="-90 15 0" radius="0.04" height="1" color="#FFC65D"> <a-animation 
                 attribute="rotation"
                  dur="10000"
                  fill="forwards"
@@ -90,8 +104,9 @@ a {
                  to="-90 15 0"
                  easing="linear"
                  >                          
-              </a-animation></a-cylinder>
-      <a-cylinder position="0.65 0.5 0" rotation="-90 -15 0" radius="0.04" height="1" color="#FF0000"> <a-animation 
+              </a-animation>
+            </a-cylinder>
+            <a-cylinder position="0.65 0.5 0" rotation="-90 -15 0" radius="0.04" height="1" color="#FF0000"> <a-animation 
                 attribute="rotation"
                  dur="10000"
                  fill="forwards"
@@ -99,9 +114,10 @@ a {
                  to="-90 -15 0"
                  easing="linear"
                  >                          
-              </a-animation></a-cylinder>
+              </a-animation>
+            </a-cylinder>
 
-      <a-cylinder position="-0.38 0.5 -0.85" rotation="-90 -55 0" radius="0.04" height="1" color="#00FF00"> <a-animation 
+          <a-cylinder position="-0.38 0.5 -0.85" rotation="-90 -55 0" radius="0.04" height="1" color="#00FF00"> <a-animation 
                 attribute="rotation"
                  dur="10000"
                  fill="forwards"
@@ -109,8 +125,10 @@ a {
                  to="-90 -55 0"
                  easing="linear"
                  >                          
-              </a-animation></a-cylinder>
-      <a-cylinder position="0.38 0.5 -0.85" rotation="-90 55 0" radius="0.04" height="1" color="#00FF00"> <a-animation 
+              </a-animation>
+          </a-cylinder>
+
+          <a-cylinder position="0.38 0.5 -0.85" rotation="-90 55 0" radius="0.04" height="1" color="#00FF00"> <a-animation 
                 attribute="rotation"
                  dur="10000"
                  fill="forwards"
@@ -118,9 +136,10 @@ a {
                  to="-90 55 0"
                  easing="linear"
                  >                          
-              </a-animation></a-cylinder>
+              </a-animation>
+          </a-cylinder>
 
-      <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#0000FF"> <a-animation 
+            <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#0000FF"> <a-animation 
                 attribute="rotation"
                  dur="10000"
                  fill="forwards"
@@ -128,155 +147,188 @@ a {
                  to="-90 -90 0"
                  easing="linear"
                  >                          
-              </a-animation></a-cylinder> 
+              </a-animation>
+            </a-cylinder> 
 
-       <a-text 
-      value="Pentagono" 
-      color="#ff0000"
-      rotation="-90 0 0" 
-      position="-0.5 0 -0.6"
-      >
-      </a-text> -->
+          <a-text 
+          value="Pentagono" 
+          color="#ff0000"
+          rotation="-90 0 0" 
+          position="-0.5 0 -0.6"
+          >
+          </a-text>
 
-      <!-- Pentagono,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+          <!-- Pentagono,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
 
+      </a-marker>
 
-
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-quadrado1.patt'>
     
-      <!-- position="direita ou esquerda, sobe ou desce, cima ou baixo" -->
+        <!-- position="direita ou esquerda, sobe ou desce, cima ou baixo" -->
 
-      <!-- QUADRADO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+        <!-- QUADRADO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
 
-      <!-- superior esquerdo,inferior esquerdo,superior direito,inferior direito -->
+        <!-- superior esquerdo,inferior esquerdo,superior direito,inferior direito -->
 
-      <!-- <a-sphere position="-0.5 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere> 
+        <a-sphere position="-0.5 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere> 
 
-      <a-sphere position="-0.5 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
-      <a-sphere position="0.5 0.5 -0.5" radius="0.1" color="#00ffdf"></a-sphere>
-      <a-sphere position="0.5 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
+        <a-sphere position="-0.5 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
+        <a-sphere position="0.5 0.5 -0.5" radius="0.1" color="#00ffdf"></a-sphere>
+        <a-sphere position="0.5 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
 
-      <a-cylinder position="-0.5 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FFC65D"></a-cylinder>
-      <a-cylinder position="0.5 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FF0000"></a-cylinder>
-      <a-cylinder position="0 0.5 -0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#00FF00"></a-cylinder>
-      <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#0000FF"></a-cylinder> 
+        <a-cylinder position="-0.5 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FFC65D"></a-cylinder>
+        <a-cylinder position="0.5 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FF0000"></a-cylinder>
+        <a-cylinder position="0 0.5 -0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#00FF00"></a-cylinder>
+        <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#0000FF"></a-cylinder> 
 
-       <a-text 
-      value="Quadrado" 
-      color="#ff0000"
-      rotation="-90 0 0" 
-      position="-0.5 0 0"
-      >
-      </a-text>-->
+         <a-text 
+        value="Quadrado" 
+        color="#ff0000"
+        rotation="-90 0 0" 
+        position="-0.5 0 0"
+        >
+        </a-text>
 
-      <!-- QUADRADO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+        <!-- QUADRADO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
 
+      </a-marker>
 
-      <!-- RETANGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-      <!-- superior esquerdo,inferior esquerdo,superior direito,inferior direito -->
-
-      <!-- <a-sphere position="-0.75 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere> 
-      <a-sphere position="-0.75 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
-      <a-sphere position="0.75 0.5 -0.5" radius="0.1" color="#00ffdf"></a-sphere>
-      <a-sphere position="0.75 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
-
-      <a-cylinder position="-0.75 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FFC65D"></a-cylinder>
-      <a-cylinder position="0.75 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FF0000"></a-cylinder>
-      <a-cylinder position="0 0.5 -0.5" rotation="-90 -90 0" radius="0.04" height="1.5" color="#00FF00"></a-cylinder>
-      <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1.5" color="#0000FF"></a-cylinder> 
-
-      <a-text 
-      value="Retangulo" 
-      color="#ff0000"
-      rotation="-90 0 0" 
-      position="-0.5 0 0"
-      >
-      </a-text> -->
-
-      <!-- RETANGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-ret1.patt'>
 
 
+        <!-- RETANGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
 
-      <!-- TRIÂNGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+        <!-- superior esquerdo,inferior esquerdo,superior direito,inferior direito -->
 
-      <!-- superior esquerdo, inferior esquerdo, inferior direito-->
+        <a-sphere position="-0.75 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere> 
+        <a-sphere position="-0.75 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
+        <a-sphere position="0.75 0.5 -0.5" radius="0.1" color="#00ffdf"></a-sphere>
+        <a-sphere position="0.75 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
 
-      <!-- <a-sphere position="-0.5 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere>
-      <a-sphere position="-0.5 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
-      <a-sphere position="0.5 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
+        <a-cylinder position="-0.75 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FFC65D"></a-cylinder>
+        <a-cylinder position="0.75 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FF0000"></a-cylinder>
+        <a-cylinder position="0 0.5 -0.5" rotation="-90 -90 0" radius="0.04" height="1.5" color="#00FF00"></a-cylinder>
+        <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1.5" color="#0000FF"></a-cylinder> 
 
-      <a-cylinder position="-0.5 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FFC65D"></a-cylinder>
-      <a-cylinder position="0 0.5 0" rotation="-90 45 0" radius="0.04" height="1.5" color="#FF0000"></a-cylinder>
-      <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#0000FF"></a-cylinder> 
+        <a-text 
+        value="Retangulo" 
+        color="#ff0000"
+        rotation="-90 0 0" 
+        position="-0.5 0 0"
+        >
+        </a-text>
 
-       <a-text 
-      value="Triangulo" 
-      color="#ff0000"
-      rotation="-90 0 0" 
-      position="0.2 0 0"
-      >
-      </a-text> -->
+        <!-- RETANGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
 
-      <!-- TRIÂNGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+      </a-marker>
 
-      <!-- CIRCUNFERÊNCIA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-circunferencia1.patt'>
 
-      <!-- <a-torus position="0 0.5 0" rotation="-90 0 0" arc="360" radius="0.5" radius-tubular="0.02"  color="#FFC65D">
-         <a-animation 
-                attribute="rotation"
-                 dur="10000"
-                 fill="forwards"
-                 to="360 360 360"
-                 easing="linear"
-                 repeat="indefinite">                          
-              </a-animation>
-      </a-torus>
-      
-      <a-text 
-      value="Circunferencia" 
-      color="#ff0000"
-      rotation="-90 0 0" 
-      position="-0.5 0 0"
-      >
-      </a-text> -->
+        <!-- CIRCUNFERÊNCIA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
 
-    <!-- CIRCUNFERÊNCIA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+        <a-torus position="0 0.5 0" rotation="-90 0 0" arc="360" radius="0.5" radius-tubular="0.02"  color="#FFC65D">
+          <a-animation 
+            attribute="rotation"
+             dur="10000"
+             fill="forwards"
+             to="360 360 360"
+             easing="linear"
+             repeat="indefinite">                          
+          </a-animation>
+        </a-torus>
+        
+        <a-text 
+        value="Circunferencia" 
+        color="#ff0000"
+        rotation="-90 0 0" 
+        position="-0.5 0 0"
+        >
+        </a-text>
+
+        <!-- CIRCUNFERÊNCIA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+
+      </a-marker>
+
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-texto1.patt'>
+
+        <a-text 
+        value="Circunferencia" 
+        rotation="-90 0 0" 
+        geometry="primitive:plane">
+        </a-text>
+
+      </a-marker>
+
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-boxA.patt'>
+
+        <a-box position='0 0.5 0' material='opacity: 0.5; color:#ff0000;'>
+          <a-animation 
+            attribute="rotation"
+             dur="10000"
+             fill="forwards"
+             to="0 360 0"
+             easing="linear"
+             repeat="indefinite">                          
+          </a-animation>
+        </a-box>
+    
+      </a-marker>
 
 
-      <!--  <a-text 
-      value="Circunferencia" 
-      rotation="-90 0 0" 
-      geometry="primitive:plane">
-      </a-text> -->
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-box.patt'>
 
-        <!-- <a-box position='0 0.5 0' material='opacity: 0.5; color:#ff0000;'>
-              <a-animation 
-                attribute="rotation"
-                 dur="10000"
-                 fill="forwards"
-                 to="0 360 0"
-                 easing="linear"
-                 repeat="indefinite">                          
-              </a-animation>
-            </a-box> -->
-    <!-- <a-sphere 
-    position='0 0.5 0' 
-    material='opacity: 0.5; color:#00ff00;' 
-    radius='1'>
-    </a-sphere> -->
+          <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
 
-    <!-- <a-plane 
-    position='0 0.5 0' 
-    rotation='-90 0 0'
-    material='opacity: 0.5; color:#0000ff;' 
-    >
-    </a-plane> -->
+      </a-marker>
 
-    <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>-->
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-esfera1.patt'>
 
-      <!-- <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane> -->
+          <a-sphere 
+          position='0 0.5 0' 
+          material='opacity: 0.5; color:#00ff00;' 
+          radius='1'>
+          </a-sphere>
 
-    </a-marker>
+      </a-marker>
+
+
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-plano1.patt'>
+
+        <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" material='opacity: 0.5; color:#0000ff;' ></a-plane>
+
+      </a-marker>
+
+
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-tetraedro1.patt'>
+
+        <!-- tetraedro regular -->
+
+        <a-tetrahedron color="#FF926B" radius="1" wireframe="true"></a-tetrahedron>
+
+        <!-- tetraedro regular -->
+
+      </a-marker>
+
+
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-octaedro1.patt'>
+
+        <!-- octaedro regular -->
+
+        <a-octahedron color="#FF0000" radius="1" wireframe="true"></a-octahedron>
+
+        <!-- octaedro regular -->
+
+      </a-marker>
+
+
+      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-anel1.patt'>
+
+        <!-- Basic anel = ring. -->
+        <a-ring color="teal" radius-inner="1" radius-outer="2"></a-ring>
+
+      </a-marker>
+
+
     <a-entity camera ></a-entity>
     </a-scene>
   </body>
