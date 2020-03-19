@@ -1,355 +1,58 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>MATEMÁTICA RA</title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="googlebot" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-<style type="text/css">
-  
-#arjsDebugUIContainer 
-{
-   display: none; !important;
-}
-  
-.a-enter-vr-button
-{
-   display: none; !important;   
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
 }
 
-a {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  z-index: 99;
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
 }
 </style>
-
-
-<script src="https://fredtavares2018.github.io/ra/js/aframe.min.js"></script>
-<!-- include aframe-ar.js -->
-<script src="https://fredtavares2018.github.io/ra/js/aframe-ar.js"></script>
-
 </head>
-  <body style='margin : 0px; overflow: hidden;'>
-
-    <a-scene embedded arjs='sourceType: webcam;'>
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-tri1.patt'>
-
-        <!-- Basic triangle. -->
-        <a-triangle 
-        color="#00ff00" 
-        vertex-c="1 -1 0"
-        rotation="-90 0 0"
-        >
-        </a-triangle>
-
-      </a-marker>
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-tri2.patt'>
-
-        <!-- TRIÂNGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-        <!-- superior esquerdo, inferior esquerdo, inferior direito-->
-
-        <a-sphere position="-0.5 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere>
-        <a-sphere position="-0.5 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
-        <a-sphere position="0.5 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
-
-        <a-cylinder position="-0.5 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FFC65D"></a-cylinder>
-        <a-cylinder position="0 0.5 0" rotation="-90 45 0" radius="0.04" height="1.5" color="#FF0000"></a-cylinder>
-        <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#0000FF"></a-cylinder> 
-
-         <a-text 
-        value="Triangulo" 
-        color="#ff0000"
-        rotation="-90 0 0" 
-        position="0.2 0 0"
-        >
-        </a-text>
-
-        <!-- TRIÂNGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-      </a-marker>
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-pent1.patt'>
-
-          <!-- Pentagono,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-          <!-- superior esquerdo,inferior esquerdo,superior direito,inferior direito -->
-
-          <a-sphere position="-0.80 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere> 
-          <a-sphere position="-0.5 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
-          <a-sphere position="0.80 0.5 -0.5" radius="0.1" color="#00ffdf"></a-sphere>
-          <a-sphere position="0.5 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
-          <a-sphere position="0 0.5 -1.1" radius="0.1" color="#ff00ff"></a-sphere>
-
-              <a-cylinder position="-0.65 0.5 0"  radius="0.04" height="1" color="#FFC65D"> 
-
-                <a-animation 
-                attribute="rotation"
-                 dur="10000"
-                 fill="forwards"
-                  from="360 360 360"
-                 to="-90 15 0"
-                 easing="linear"
-                 >                          
-              </a-animation>
-            </a-cylinder>
-            <a-cylinder position="0.65 0.5 0" rotation="-90 -15 0" radius="0.04" height="1" color="#FF0000"> <a-animation 
-                attribute="rotation"
-                 dur="10000"
-                 fill="forwards"
-                  from="360 360 360"
-                 to="-90 -15 0"
-                 easing="linear"
-                 >                          
-              </a-animation>
-            </a-cylinder>
-
-          <a-cylinder position="-0.38 0.5 -0.85" rotation="-90 -55 0" radius="0.04" height="1" color="#00FF00"> <a-animation 
-                attribute="rotation"
-                 dur="10000"
-                 fill="forwards"
-                  from="360 360 360"
-                 to="-90 -55 0"
-                 easing="linear"
-                 >                          
-              </a-animation>
-          </a-cylinder>
-
-          <a-cylinder position="0.38 0.5 -0.85" rotation="-90 55 0" radius="0.04" height="1" color="#00FF00"> <a-animation 
-                attribute="rotation"
-                 dur="10000"
-                 fill="forwards"
-                  from="360 360 360"
-                 to="-90 55 0"
-                 easing="linear"
-                 >                          
-              </a-animation>
-          </a-cylinder>
-
-            <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#0000FF"> <a-animation 
-                attribute="rotation"
-                 dur="10000"
-                 fill="forwards"
-                 from="360 360 360"
-                 to="-90 -90 0"
-                 easing="linear"
-                 >                          
-              </a-animation>
-            </a-cylinder> 
-
-          <a-text 
-          value="Pentagono" 
-          color="#ff0000"
-          rotation="-90 0 0" 
-          position="-0.5 0 -0.6"
-          >
-          </a-text>
-
-          <!-- Pentagono,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-      </a-marker>
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-quadrado1.patt'>
-    
-        <!-- position="direita ou esquerda, sobe ou desce, cima ou baixo" -->
-
-        <!-- QUADRADO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-        <!-- superior esquerdo,inferior esquerdo,superior direito,inferior direito -->
-
-        <a-sphere position="-0.5 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere> 
-
-        <a-sphere position="-0.5 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
-        <a-sphere position="0.5 0.5 -0.5" radius="0.1" color="#00ffdf"></a-sphere>
-        <a-sphere position="0.5 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
-
-        <a-cylinder position="-0.5 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FFC65D"></a-cylinder>
-        <a-cylinder position="0.5 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FF0000"></a-cylinder>
-        <a-cylinder position="0 0.5 -0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#00FF00"></a-cylinder>
-        <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1" color="#0000FF"></a-cylinder> 
-
-         <a-text 
-        value="Quadrado" 
-        color="#ff0000"
-        rotation="-90 0 0" 
-        position="-0.5 0 0"
-        >
-        </a-text>
-
-        <!-- QUADRADO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-      </a-marker>
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-ret1.patt'>
-
-
-        <!-- RETANGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-        <!-- superior esquerdo,inferior esquerdo,superior direito,inferior direito -->
-
-        <a-sphere position="-0.75 0.5 -0.5" radius="0.1" color="#EF2D5E"></a-sphere> 
-        <a-sphere position="-0.75 0.5 0.5" radius="0.1" color="#ff0000"></a-sphere>
-        <a-sphere position="0.75 0.5 -0.5" radius="0.1" color="#00ffdf"></a-sphere>
-        <a-sphere position="0.75 0.5 0.5" radius="0.1" color="#ff00ff"></a-sphere>
-
-        <a-cylinder position="-0.75 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FFC65D"></a-cylinder>
-        <a-cylinder position="0.75 0.5 0" rotation="-90 0 0" radius="0.04" height="1" color="#FF0000"></a-cylinder>
-        <a-cylinder position="0 0.5 -0.5" rotation="-90 -90 0" radius="0.04" height="1.5" color="#00FF00"></a-cylinder>
-        <a-cylinder position="0 0.5 0.5" rotation="-90 -90 0" radius="0.04" height="1.5" color="#0000FF"></a-cylinder> 
-
-        <a-text 
-        value="Retangulo" 
-        color="#ff0000"
-        rotation="-90 0 0" 
-        position="-0.5 0 0"
-        >
-        </a-text>
-
-        <!-- RETANGULO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-      </a-marker>
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-circulo1.patt'>
-
-          <!-- circulo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-         <a-ring radius-inner="0.01" radius-outer="0.7" rotation="-90 0 0" color="#ff0000"></a-ring>
-
-          <a-text 
-          value="Circulo" 
-          color="#fff"
-          rotation="-90 0 0" 
-          position="-0.3 0.5 -0.1"
-          >
-          </a-text>
-
-          <!-- circulo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-      </a-marker>
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-circunferencia1.patt'>
-
-        <!-- CIRCUNFERÊNCIA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-        <a-torus position="0 0.5 0"  arc="360" radius="0.5" radius-tubular="0.02"  color="#FFC65D">
-          <a-animation 
-            attribute="rotation"
-             dur="5000"
-             fill="forwards"
-             to="360 0 0"
-             easing="linear"
-             repeat="indefinite">                          
-          </a-animation>
-        </a-torus>
-        
-        <a-text 
-        value="Circunferencia" 
-        color="#ff0000"
-        rotation="-90 0 0" 
-        position="-0.5 0 0"
-        >
-        </a-text>
-
-        <!-- CIRCUNFERÊNCIA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-
-      </a-marker>
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-texto1.patt'>
-
-        <a-text 
-        value="Realidade" 
-        rotation="-90 0 0" 
-        geometry="primitive:plane">
-        </a-text>
-
-      </a-marker>
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-boxA.patt'>
-
-        <a-box position='0 0.5 0' material='opacity: 0.5; color:#ff0000;'>
-          <a-animation 
-            attribute="rotation"
-             dur="10000"
-             fill="forwards"
-             to="0 360 0"
-             easing="linear"
-             repeat="indefinite">                          
-          </a-animation>
-        </a-box>
-    
-      </a-marker>
-
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-box.patt'>
-
-          <a-box position="0 0.5 0"  color="#4CC3D9"></a-box>
-
-      </a-marker>
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-esfera1.patt'>
-
-          <a-sphere 
-          position='0 0.5 0' 
-          material='opacity: 0.5; color:#00ff00;' 
-          radius='1'>
-          </a-sphere>
-
-      </a-marker>
-
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-plano1.patt'>
-
-        <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" material='opacity: 0.5; color:#0000ff;' ></a-plane>
-
-      </a-marker>
-
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-tetraedro1.patt'>
-
-        <!-- tetraedro regular -->
-
-        <a-tetrahedron color="#FF926B" radius="1" wireframe="true"></a-tetrahedron>
-
-        <!-- tetraedro regular -->
-
-      </a-marker>
-
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-octaedro1.patt'>
-
-        <!-- octaedro regular -->
-
-        <a-octahedron color="#FF0000" radius="1" wireframe="true"></a-octahedron>
-
-        <!-- octaedro regular -->
-
-      </a-marker>
-
-
-      <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/RA_matematica/pattern-anel1.patt'>
-
-        <!-- Basic anel = ring. -->
-        <a-ring color="#0000ff" radius-inner="0.6" radius-outer="0.7" rotation="-90 0 0 "></a-ring>
-
-      </a-marker>
-
-
-    <a-entity camera ></a-entity>
-    </a-scene>
-  </body>
+<body>
+
+<div class="gallery">
+  <a target="_blank" href="pattern-anel1.png">
+    <img src="pattern-anel1.png" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_forest.png">
+    <img src="img_forest.png" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.png">
+    <img src="img_lights.png" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.png">
+    <img src="img_mountains.png" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+</body>
 </html>
