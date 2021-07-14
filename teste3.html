@@ -11,12 +11,12 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-    <a-marker preset='custom' type='pattern' url='https://fredtavares2018.github.io/ra/hiro.patt'>
+    <!-- <a-marker preset='custom' type='pattern' url='https://raw.githubusercontent.com/fredtavares2018/ra/master/hiro.patt'>
         <a-image position="0 0.4 0" rotation="270 0 0" height="1" width="1" src="piramide.png">
 
         </a-image>
 
-    </a-marker>
+    </a-marker> -->
 
     <script>
         //////////////////////////////////////////////////////////////////////////////////
@@ -140,21 +140,31 @@
         var arWorldRoot = smoothedRoot
 
         // add a torus knot
-        var geometry = new THREE.BoxGeometry(1, 1, 1);
-        var material = new THREE.MeshNormalMaterial({
-            transparent: true,
-            opacity: 0.5,
-            side: THREE.DoubleSide
-        });
-        var mesh = new THREE.Mesh(geometry, material);
-        mesh.position.y = geometry.parameters.height / 2
-        arWorldRoot.add(mesh);
+        // var geometry = new THREE.BoxGeometry(1, 1, 1);
+        // var material = new THREE.MeshNormalMaterial({
+        //     transparent: true,
+        //     opacity: 0.5,
+        //     side: THREE.DoubleSide
+        // });
+        // var mesh = new THREE.Mesh(geometry, material);
+        // mesh.position.y = geometry.parameters.height / 2
+        // arWorldRoot.add(mesh);
 
-        var geometry = new THREE.TorusKnotGeometry(0.3, 0.1, 64, 16);
+        //var geometry = new THREE.TorusKnotGeometry(0.3, 0.1, 64, 16);
+        //var material = new THREE.MeshNormalMaterial();
+        //var mesh = new THREE.Mesh(geometry, material);
+        //mesh.position.y = 0.5
+        //arWorldRoot.add(mesh);
+
+        var geometry = new THREE.CylinderGeometry(0, radius, height, 4, 1)
         var material = new THREE.MeshNormalMaterial();
-        var mesh = new THREE.Mesh(geometry, material);
-        mesh.position.y = 0.5
-        arWorldRoot.add(mesh);
+        var pyramid = new THREE.Mesh(geometry, material);
+
+        //var material = new THREE.MeshNormalMaterial();
+        //var mesh = new THREE.Mesh(geometry, material);
+        pyramid.rotation.x += 0.00;
+        pyramid.rotation.y += 0.01;
+        arWorldRoot.add(pyramid);
 
         onRenderFcts.push(function() {
             mesh.rotation.x += 0.1
