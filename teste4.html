@@ -140,11 +140,11 @@
         var arWorldRoot = smoothedRoot
 
         // add a torus knot
-        var radius = 2;
+        var radius = 1;
         var height = 3;
         const loader = new THREE.TextureLoader();
         
-        var geometry = new THREE.CylinderGeometry(0, radius, height, 2, 0.5)
+        var geometry = new THREE.CylinderGeometry(0, radius, height, 4, 1)
         var material = new THREE.MeshNormalMaterial(
         {
             map: loader.load("texturaPiramide.jpg")
