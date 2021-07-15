@@ -144,13 +144,15 @@
         var height = 4;
 
         var geometry = new THREE.CylinderGeometry(0, radius, height, 4, 1)
-        var material = new THREE.MeshNormalMaterial();
+        var material = new THREE.MeshNormalMaterial(
+        {
+            map: new THREE.TextureLoader().load("texturaPiramide.jpg")
+        }
+        );
         var pyramid = new THREE.Mesh(geometry, material);
         arWorldRoot.add(pyramid);
 
         onRenderFcts.push(function() {
-            pyramid.material.map = THREE.ImageUtils.loadTexture( 'texturaPiramide.jpg');
-            pyramid.material.needsUpdate = true;
             pyramid.rotation.x += 0.00;
             pyramid.rotation.y += 0.01;
         })
