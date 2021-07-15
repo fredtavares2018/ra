@@ -145,16 +145,12 @@
         var height = 3;
         
         var geometry = new THREE.CylinderGeometry(0, radius, height, 4, 1)
-        var earthTexture = new THREE.TextureLoader().load("https://threejsfundamentals.org/threejs/resources/images/wall.jpg");
-        var earthMaterial = new THREE.MeshBasicMaterial();
-
-    earthMaterial.map = earthTexture;
-        //var material = new THREE.MeshNormalMaterial(
-       // {
-         //   map: THREE.ImageUtils.loadTexture("https://threejsfundamentals.org/threejs/resources/images/wall.jpg")
-       // }
-      //  );
-        var pyramid = new THREE.Mesh(geometry, earthMaterial);
+        var earthTexture = THREE.ImageUtils.loadTexture("https://threejsfundamentals.org/threejs/resources/images/wall.jpg", {}, function() {
+        renderer.render(scene);
+        }
+        );
+        var material = new THREE.MeshBasicMaterial( { map: earthTexture } );
+        var pyramid = new THREE.Mesh(geometry, material);
         arWorldRoot.add(pyramid);
 
         onRenderFcts.push(function() {
