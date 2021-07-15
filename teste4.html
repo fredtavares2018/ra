@@ -149,6 +149,8 @@
         arWorldRoot.add(pyramid);
 
         onRenderFcts.push(function() {
+            pyramid.material.map = THREE.ImageUtils.loadTexture( 'texturaPiramide.jpg');
+            pyramid.material.needsUpdate = true;
             pyramid.rotation.x += 0.00;
             pyramid.rotation.y += 0.01;
         })
