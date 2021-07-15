@@ -146,7 +146,7 @@
         
         var geometry = new THREE.CylinderGeometry(0, radius, height, 4, 1)
         var earthTexture = THREE.ImageUtils.loadTexture("https://threejsfundamentals.org/threejs/resources/images/wall.jpg", {}, function() {
-        renderer.render(scene);
+        renderer.render(scene, camera);
         }
         );
         var material = new THREE.MeshBasicMaterial( { map: earthTexture } );
